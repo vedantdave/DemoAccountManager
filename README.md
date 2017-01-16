@@ -9,13 +9,16 @@ Android Custom Account Creation
   * Make another class DemoAccountAuthenticator and extend <b>AbstractAccountAuthenticator</b> and implement its method and a constructor.
   * Make a service <b>DemoAccount</b> by extending <b>Service</b> class and implement its method.
     * In onBind() Method, return new DemoAccountAuthenticator object with calling of <b>getIBinder()</b>.
-* Android Manifest File
-  * Add permissions
+  * <b>Android Manifest File</b>
+   * Add permissions
     * `<uses-permission android:name="android.permission.GET_ACCOUNTS" />`
     * `<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />`
+  * <b>authenticator.xml</b>
+   * set the accountType to your desired domain e.g. - "com.gmail"
   * Register Service
     write the following code
-     `<service android:name=".DemoAccountService">
+     ```
+     <service android:name=".DemoAccountService">
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
             </intent-filter>
@@ -23,6 +26,7 @@ Android Custom Account Creation
             <meta-data
                 android:name="android.accounts.AccountAuthenticator"
                 android:resource="@xml/authenticator" />
-        </service>`
-- authenticator.xml
-  - set the accountType to your desired domain e.g. - "com.gmail"
+        </service>
+        
+        ```
+
