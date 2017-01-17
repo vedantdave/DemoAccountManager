@@ -8,8 +8,9 @@ import android.view.View;
 import android.widget.EditText;
 
 
-public class Signup extends AppCompatActivity implements View.OnClickListener  {
-private EditText editEmail, editPassword;
+public class Signup extends AppCompatActivity implements View.OnClickListener {
+    private EditText editEmail, editPassword;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +25,8 @@ private EditText editEmail, editPassword;
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnSignup:
-                AccountUtils.get(Signup.this).createAccount(editEmail.getText().toString(),editPassword.getText().toString());
-                startActivity(new Intent(Signup.this,LoginActivity.class));
+                AccountUtils.get(Signup.this).createAccount(editEmail.getText().toString(), editPassword.getText().toString());
+                startActivity(new Intent(Signup.this, HomeActivity.class));
                 break;
         }
 
