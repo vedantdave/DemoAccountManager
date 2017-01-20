@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">DemoAccountManager</string>
+    <string name="com.pubnub.publishKey" translatable="false">pub-c-1b2a07fa-d192-4a34-8a72-a7f2cc38e581</string>
+    <string name="com.pubnub.secretKey" translatable="false">sec-c-YzVkMzFhMmQtMjdjMC00NmJmLWIxZjktNjYyZGZhNjljMTcz</string>
+    <string name="com.pubnub.subscribeKey" translatable="false">sub-c-9b637f30-cb98-11e6-b82b-0619f8945a4f</string>
 </resources>
