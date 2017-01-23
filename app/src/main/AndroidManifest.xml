@@ -51,9 +51,11 @@
             android:syncable="true" />
 
         <activity android:name=".HomeActivity"></activity>
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="43b6101bcd9a9d0ee7e062d11a6b3ceb27b111c6" />
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
