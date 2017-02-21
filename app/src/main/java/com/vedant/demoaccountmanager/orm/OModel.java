@@ -119,4 +119,10 @@ public class OModel extends SQLiteOpenHelper {
         db.close();
         return count;
     }
+    public Cursor fetch(String column)
+    { SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("select " + column + " from " + getTableName(),null);
+
+        return cursor;
+    }
 }

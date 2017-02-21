@@ -27,6 +27,7 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
             case R.id.btnSignup:
                 AccountUtils.get(Signup.this).createAccount(editEmail.getText().toString(), editPassword.getText().toString());
                 startActivity(new Intent(Signup.this, HomeActivity.class));
+                finish();
                 break;
         }
 

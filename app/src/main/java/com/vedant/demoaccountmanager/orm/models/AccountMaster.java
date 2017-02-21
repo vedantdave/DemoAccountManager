@@ -12,7 +12,7 @@ import com.vedant.demoaccountmanager.orm.OModel;
 
 public class AccountMaster extends OModel {
 
-OColumn name = new OColumn("name", ColumnType.VARCHAR);
+    OColumn name = new OColumn("name", ColumnType.VARCHAR);
 
     public AccountMaster(Context context) {
         super(context, "account.master");

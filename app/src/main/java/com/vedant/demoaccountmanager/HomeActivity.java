@@ -1,6 +1,7 @@
 package com.vedant.demoaccountmanager;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -24,6 +25,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btnUpdate).setOnClickListener(this);
         findViewById(R.id.btnSubmit).setOnClickListener(this);
         findViewById(R.id.btnDelete).setOnClickListener(this);
+        findViewById(R.id.btnView).setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +43,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnDelete:
                 accountMaster.delete("name = ? ", new String[]{txtName.getText().toString()});
+                break;
+            case R.id.btnView:
+               startActivity(new Intent(this,ListMember.class));
+
                 break;
         }
     }
